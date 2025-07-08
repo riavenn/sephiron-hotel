@@ -23,8 +23,10 @@ const Contact = () => {
     }
   }, []);
 
-  const handleIconClick = (ref: React.RefObject<HTMLInputElement>) => {
-    ref.current?.showPicker();
+  const handleIconClick = (ref: React.RefObject<HTMLInputElement | null>) => {
+    if (ref.current) {
+      ref.current.showPicker();
+    }
   };
 
 
