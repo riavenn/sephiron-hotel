@@ -79,9 +79,9 @@ const Testimonials = () => {
                   <Image
                     src={testimonial.image}
                     alt={testimonial.name}
-                    layout="fill"
-                    objectFit="cover"
-                    className="rounded-full"
+                    fill
+                    sizes="(max-width: 96px) 100vw, 96px"
+                    className="rounded-full object-cover"
                   />
                 </div>
                 <p className="text-stone-600 italic mb-4">&ldquo;{testimonial.comment}&rdquo;</p>
