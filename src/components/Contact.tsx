@@ -23,6 +23,10 @@ const Contact = () => {
     }
   }, []);
 
+  const handleIconClick = (ref: React.RefObject<HTMLInputElement>) => {
+    ref.current?.showPicker();
+  };
+
 
 
   return (
@@ -70,18 +74,18 @@ const Contact = () => {
               <label htmlFor="checkin" className="block text-sm font-medium text-stone-700">Check-in Date</label>
               <div className="relative mt-1">
                 <input type="date" id="checkin" name="checkin" ref={checkinRef} lang="en" className="block w-full p-3 border border-stone-300 rounded-md shadow-sm focus:ring-stone-500 focus:border-stone-500 text-stone-900" />
-                <label htmlFor="checkin" className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer">
+                <div onClick={() => handleIconClick(checkinRef)} className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer">
                   <CalendarDays className="w-5 h-5 text-stone-400 hover:text-stone-600 transition-colors duration-200" />
-                </label>
+                </div>
               </div>
             </div>
             <div>
               <label htmlFor="checkout" className="block text-sm font-medium text-stone-700">Check-out Date</label>
               <div className="relative mt-1">
                 <input type="date" id="checkout" name="checkout" ref={checkoutRef} lang="en" className="block w-full p-3 border border-stone-300 rounded-md shadow-sm focus:ring-stone-500 focus:border-stone-500 text-stone-900" />
-                <label htmlFor="checkout" className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer">
+                <div onClick={() => handleIconClick(checkoutRef)} className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer">
                   <CalendarDays className="w-5 h-5 text-stone-400 hover:text-stone-600 transition-colors duration-200" />
-                </label>
+                </div>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
