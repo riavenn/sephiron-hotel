@@ -75,13 +75,13 @@ const Testimonials = () => {
           {testimonialsData.map((testimonial) => (
             <div key={testimonial.id} className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.33%] p-4">
               <div className="bg-stone-200 p-8 rounded-lg shadow-lg text-center h-full flex flex-col">
-                <div className="relative w-24 h-24 mx-auto mb-4">
+                <div className="w-24 h-24 mx-auto mb-4 overflow-hidden rounded-full">
                   <Image
                     src={testimonial.image}
                     alt={testimonial.name}
-                    fill
-                    sizes="(max-width: 96px) 100vw, 96px"
-                    className="rounded-full object-cover"
+                    width={96}
+                    height={96}
+                    className="object-cover"
                   />
                 </div>
                 <p className="text-stone-600 italic mb-4">&ldquo;{testimonial.comment}&rdquo;</p>
