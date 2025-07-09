@@ -40,37 +40,37 @@ const Activities: FC = () => {
 
         <div
           ref={ref}
-          className={`container mx-auto px-4 transition-all duration-1000 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'} lg:px-8 xl:px-16`}>
+          className={`container mx-auto px-8 transition-all duration-1000 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'} lg:px-16 xl:px-32`}>
         <div className="text-left md:text-center mb-12">
           <h3 className="text-sm uppercase tracking-wider text-stone-500">Experiences</h3>
           <h2 className="text-3xl md:text-4xl font-bold text-stone-800 mt-2">Unforgettable Activities</h2>
           <p className="mt-4 text-stone-600 max-w-2xl md:mx-auto">From relaxing spa days to adventurous outings, we offer a diverse range of activities to enrich your stay and make it truly special.</p>
         </div>
-        <div className="space-y-12">
+        <div className="space-y-8">
           {activitiesData.map((activity, index) => (
-            <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col md:flex-row">
-              <div className="w-full h-64 md:h-auto md:w-1/2 relative">
+            <div key={index} className="bg-white shadow-md rounded-lg overflow-hidden flex flex-col md:flex-row">
+              <div className="w-full h-56 md:h-auto md:w-1/2 relative">
                 <Image src={activity.image} alt={activity.title} layout="fill" className="object-cover" />
               </div>
-              <div className="w-full md:w-1/2 p-8 flex flex-col justify-between">
+              <div className="w-full md:w-1/2 p-6 flex flex-col justify-between">
                 <div>
-                  <p className="text-sm text-stone-500 uppercase tracking-wider">{activity.superTitle}</p>
-                  <h3 className="text-3xl font-bold text-stone-800 mt-2">{activity.title}</h3>
-                  <p className="text-stone-600 mt-4">{activity.description}</p>
-                  <div className="mt-6">
-                    <h4 className="font-semibold text-stone-700">Included Services:</h4>
-                    <ul className="mt-2 space-y-1 text-stone-500">
+                  <p className="text-xs text-stone-500 uppercase tracking-wider">{activity.superTitle}</p>
+                  <h3 className="text-2xl font-bold text-stone-800 mt-1">{activity.title}</h3>
+                  <p className="text-stone-600 mt-3 text-sm">{activity.description}</p>
+                  <div className="mt-4">
+                    <h4 className="font-semibold text-stone-700 text-sm">Included Services:</h4>
+                    <ul className="mt-2 space-y-1 text-stone-500 text-sm">
                       {activity.services.map((service, i) => (
                         <li key={i} className="flex items-center">
-                          <svg className="w-4 h-4 mr-2 text-stone-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+                          <svg className="w-3 h-3 mr-2 text-stone-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
                           {service}
                         </li>
                       ))}
                     </ul>
                   </div>
                 </div>
-                <div className="mt-8">
-                  <button className="w-full bg-stone-700 text-white py-3 px-6 rounded-md hover:bg-stone-800 transition-colors duration-300">
+                <div className="mt-6">
+                  <button className="w-full bg-stone-700 text-white py-2 px-4 rounded-md hover:bg-stone-800 transition-colors duration-300 text-sm">
                     Book Now
                   </button>
                 </div>

@@ -61,7 +61,7 @@ const Testimonials = () => {
 
   return (
     <section
-      className="container mx-auto py-16 px-4 lg:px-8 xl:px-16">
+      className="container mx-auto py-16 px-8 lg:px-16 xl:px-32">
       <div
         ref={ref}
         className={`transition-all duration-1000 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`} />
@@ -73,28 +73,28 @@ const Testimonials = () => {
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
           {testimonialsData.map((testimonial) => (
-            <div key={testimonial.id} className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.33%] p-4">
-              <div className="bg-stone-200 p-8 rounded-lg shadow-lg text-center h-full flex flex-col">
-                <div className="relative w-24 h-24 mx-auto mb-4 overflow-hidden rounded-full">
+            <div key={testimonial.id} className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.33%] p-3">
+              <div className="bg-stone-200 p-6 rounded-lg shadow-md text-center h-full flex flex-col">
+                <div className="relative w-20 h-20 mx-auto mb-3 overflow-hidden rounded-full">
                   <Image
                     src={testimonial.image}
                     alt={testimonial.name}
                     fill
-                    sizes="96px"
+                    sizes="80px"
                     className="object-cover"
                   />
                 </div>
-                <p className="text-stone-600 italic mb-4">&ldquo;{testimonial.comment}&rdquo;</p>
-                <div className="flex justify-center mb-4">
+                <p className="text-stone-600 italic mb-3 text-sm">&ldquo;{testimonial.comment}&rdquo;</p>
+                <div className="flex justify-center mb-3">
                   {Array.from({ length: testimonial.rating }).map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
+                    <Star key={i} className="w-4 h-4 text-yellow-500 fill-current" />
                   ))}
                   {Array.from({ length: 5 - testimonial.rating }).map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-stone-300 fill-current" />
+                    <Star key={i} className="w-4 h-4 text-stone-300 fill-current" />
                   ))}
                 </div>
                 <div className="mt-auto">
-                  <h4 className="text-lg font-semibold text-stone-800">{testimonial.name}</h4>
+                  <h4 className="text-base font-semibold text-stone-800">{testimonial.name}</h4>
                 </div>
               </div>
             </div>
