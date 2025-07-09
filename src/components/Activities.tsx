@@ -40,7 +40,7 @@ const Activities: FC = () => {
 
         <div
           ref={ref}
-          className={`container mx-auto px-4 transition-all duration-1000 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+          className={`container mx-auto px-4 transition-all duration-1000 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'} lg:px-8 xl:px-16`}>
         <div className="text-left md:text-center mb-12">
           <h3 className="text-sm uppercase tracking-wider text-stone-500">Experiences</h3>
           <h2 className="text-3xl md:text-4xl font-bold text-stone-800 mt-2">Unforgettable Activities</h2>

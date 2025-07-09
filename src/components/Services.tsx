@@ -56,7 +56,7 @@ const Services: FC = () => {
 
       <div
         ref={ref}
-        className={`container mx-auto text-center transition-all duration-1000 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+        className={`container mx-auto text-center transition-all duration-1000 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'} px-4 lg:px-8 xl:px-16`}>
         <h3 className="text-sm uppercase tracking-wider text-stone-500">Our Services</h3>
         <h2 className="text-3xl md:text-4xl font-bold text-stone-800 mt-2">Explore Our Services</h2>
         <p className="mt-4 text-stone-600 max-w-2xl mx-auto px-4 md:px-0">We are committed to providing our guests with the best experience possible, from luxurious amenities to personalized services.</p>

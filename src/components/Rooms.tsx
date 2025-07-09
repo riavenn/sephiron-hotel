@@ -39,7 +39,7 @@ const Rooms = () => {
 
       <div
         ref={ref}
-        className={`container mx-auto transition-all duration-1000 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+        className={`container mx-auto transition-all duration-1000 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'} px-4 lg:px-8 xl:px-16`}>
         <div className="text-center mb-8 md:mb-12 px-4 md:px-0">
           <h3 className="text-sm uppercase tracking-wider text-stone-500">Our Rooms</h3>
           <h2 className="text-3xl md:text-4xl font-bold text-stone-800 mt-2">Explore Our Accommodations</h2>

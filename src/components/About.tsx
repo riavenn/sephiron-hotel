@@ -15,7 +15,7 @@ const About = () => {
 
         <div
           ref={ref}
-          className={`container mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center transition-all duration-1000 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+          className={`container mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center transition-all duration-1000 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'} px-4 lg:px-8 xl:px-16`}>
         <div className="relative h-[300px] md:h-[500px]">
           <div className="absolute top-0 left-0 w-full md:w-4/5 h-full md:h-4/5 rounded-lg overflow-hidden shadow-2xl">
             <Image

@@ -61,7 +61,7 @@ const Testimonials = () => {
 
   return (
     <section
-      className="container mx-auto py-16 px-4">
+      className="container mx-auto py-16 px-4 lg:px-8 xl:px-16">
       <div
         ref={ref}
         className={`transition-all duration-1000 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`} />

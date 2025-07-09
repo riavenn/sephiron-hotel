@@ -39,7 +39,7 @@ const Contact = () => {
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div
         ref={ref}
-        className={`container mx-auto relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center transition-all duration-1000 transform ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+        className={`container mx-auto relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center transition-all duration-1000 transform ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'} px-4 lg:px-8 xl:px-16`}>
 
         {/* Left Column */}
         <div className="text-white">
